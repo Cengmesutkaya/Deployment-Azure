@@ -1,0 +1,25 @@
+========================= API =================================
+development=> pull
+development => new branch => testapi-1.0.22.82 => create branch
+release checkout
+release pull
+release merge testapi-1.0.22.82
+development view history => Taskların Numarasını Al
+release =>changes Task Numaralarını yaz => commit stage and push
+tags => new tag => testapi-1.0.22.82 => push
+
+======================== ANGULAR ==============================
+git pull origin development
+git checkout -b release-test-1.0.22.78
+environment.test.ts => version = '1.0.22.78'
+package.json => version => "1.0.2278"
+git add .
+git commit -m "version update"
+git checkout release
+git pull origin release
+git merge --no-ff --no-commit release-test-1.0.22.78
+git log --oneline --first-parent development
+git commit -m "tasks"
+git push origin release 
+git tag -a testui-1.0.22.78 -m "version update"
+git push origin testui-1.0.22.78
